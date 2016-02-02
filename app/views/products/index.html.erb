@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <h1>Kitap Yönetim Sistemi</h1>
+  <h4></h3>
+    <div class="col-md-1">
+      Kapak
+    </div>
+    <div class="col-md-1">
+      Kitap İsmi
+    </div>
+    <div class="col-md-6">
+      İçerik
+    </div>
+    <div class="col-md-2">
+      Kategori
+    </div>
+    <div class="col-md-2">
+      Ücret
+    </div>
+
+</div>
+<% @products.each do |product| %>
+  <div class="row">
+    <div class="entry">
+      <div class="col-md-1">
+        <%= image_tag(product.image_url, class:"list_image") %>
+      </div>
+      <div class="col-md-2">
+        <%= product.title %>
+      </div>
+      <div class="col-md-5">
+        <%= product.description %>
+      </div>
+      <div class="col-md-2">
+        <%= product.category %>
+      </div>
+      <div class="col-md-2">
+        <%= product.price %>
+      </div>
+      <br>
+    </div>
+    <%= link_to 'Göster', product, class:"btn btn-primary btn-sm" %>
+    <%= link_to 'Düzenle', edit_product_path(product), class:"btn btn-warning btn-sm" %>
+    <%= link_to 'Sil', product ,class:"btn btn-danger btn-sm", method: :delete, data: {confirm: 'Emin misiniz?'} %>
+  </div>
+<% end %>
+
+<br>
+
+<div class="row">
+  <%= link_to fa_icon("plus") + " Yeni Kitap Ekle", new_product_path, class:"btn btn-success btn" %>
+</div>
+
+<br>

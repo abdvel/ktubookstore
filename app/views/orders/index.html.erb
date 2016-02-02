@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sipariş Listesi</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Adı Soyadı</th>
+      <th>Adresi</th>
+      <th>Email</th>
+      <th>Ödeme Yöntemi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.address %></td>
+        <td><%= order.email %></td>
+        <td><%= order.pay_type %></td>
+        <td><%= link_to 'Göster', order %></td>
+        <td><%= link_to 'Düzenle', edit_order_path(order) %></td>
+        <td><%= link_to 'Sil', order, method: :delete, data: { confirm: 'Emin misiniz?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Yeni Sipariş', new_order_path %>

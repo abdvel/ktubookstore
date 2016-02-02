@@ -1,0 +1,14 @@
+  <%= simple_form_for(@order) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :email %>
+      <%= f.input :pay_type, collection: ["Kapıda Ödeme", "Kredi Kartı", "Havale"] %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sipariş Oluştur", class:"btn btn-success btn-xl"%>
+    </div>
+  <% end %>

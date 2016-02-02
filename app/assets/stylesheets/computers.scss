@@ -1,0 +1,76 @@
+// Place all the styles related to the Computers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.computers {
+  h1{
+      margin-bottom: .5em;
+      border-bottom: 3px dotted blue;
+  }
+
+  h4 {
+      border-bottom: 3px dotted blue;
+      padding-bottom:1em;
+      margin-bottom: 1em;
+  }
+
+  .list_image{
+    width: 50px;
+    height: 50px;
+  }
+  #viewItem{
+    font-size: 18px;
+  }
+  #storeListing{
+  li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  p {
+    margin: 0;
+    padding-bottom: 0.5em;
+    text-align: left;
+    font:  150% sans-serif;
+  }
+}
+
+  .entry {
+    font-size: 18px;
+    overflow: auto;
+    margin-top: 3em;
+    border-bottom: 1px dotted #77d;
+    min-height: 70px;
+
+    h3 {
+      font-size: 120%;
+      font-family: sans-serif;
+      margin-top: 0;
+      margin-bottom: 2px;
+    }
+  }
+  .btn-primary, .btn-success, .btn-warning, .btn-danger, .btn-info {
+    color: white;
+  }
+
+}
+#sideBar {
+  margin-top: 50px;
+  background-color: lightblue;
+  float: right;
+  width: auto;
+  min-height: 200px;
+
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      a{
+        color: white;
+        font-size: small;
+      }
+    }
+  }
+}

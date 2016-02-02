@@ -1,0 +1,52 @@
+
+<div class="row col-md-9">
+  <p id="notice"><%= notice %></p>
+  <h1>Çizgi Romanlar</h1><br>
+    <div class="col-md-1">
+      Kapak
+    </div>
+    <div class="col-md-2">
+      Kitap İsmi
+    </div>
+    <div class="col-md-4">
+      İçerik
+    </div>
+    <div class="col-md-2">
+      Kategori
+    </div>
+    <div class="col-md-2">
+      Ücret
+    </div>
+
+</div>
+
+<div class="col-md-9" id="storeListing"><br>
+<% @products.each do |product| %>
+  <div class="row">
+    <div class="entry">
+      <div class="col-md-1">
+        <%= image_tag(product.image_url, class:"list_image") %>
+      </div>
+      <div class="col-md-2">
+        <%= product.title %>
+      </div>
+      <div class="col-md-4">
+        <%= product.description %>
+      </div>
+      <div class="col-md-2">
+        <%= product.category %>
+      </div>
+      <div class="col-md-2">
+        <strong><%= number_to_currency(product.price, unit: "TRY", separator: ",", delimiter: "", format: "%n %u") %></strong><br>
+        <%= button_to 'Sepete Ekle', cart_items_path(product_id: product), remote: true, class:"btn btn-success btn-xs" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="col-md-3" id="sideBar">
+  <div id="cart">
+    <%= render @cart %>
+  </div>
+</div>

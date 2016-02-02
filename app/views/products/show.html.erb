@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kitap Bilgileri</h1>
+
+<div class="row" id="viewItem">
+  <div class="col-md-2">
+    <strong>Kitap İsmi</strong><br>
+    <%= @product.title %>
+  </div>
+  <div class="col-md-4">
+    <strong>İçerik</strong><br>
+    <%= @product.description %>
+  </div>
+  <div class="col-md-2">
+    <strong>Kategori</strong><br>
+    <%= @product.category %>
+  </div>
+  <div class="col-md-2">
+    <strong>Kapak</strong><br>
+    <%= image_tag(@product.image_url, height: '64', width: '48') %>
+  </div>
+  <div class="col-md-2">
+    <strong>Ücret</strong><br>
+    <%= @product.price %>
+  </div>
+</div>
+<br>
+<br>
+<%= link_to 'Düzenle', edit_product_path(@product), class:"btn btn-warning" %> |
+<%= link_to 'Geri', products_path, class:"btn btn-primary" %>

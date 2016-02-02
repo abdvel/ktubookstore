@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kategorileri listele</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Baslik</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.title %></td>
+        <td><%= link_to 'Goster', category %></td>
+        <td><%= link_to 'Duzenle', edit_category_path(category) %></td>
+        <td><%= link_to 'Sil', category, method: :delete, data: { confirm: 'Emin misiniz?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Yeni Kategori', new_category_path %>

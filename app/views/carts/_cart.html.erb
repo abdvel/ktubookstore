@@ -1,0 +1,12 @@
+<h2>Sepet Listesi</h2>
+<ul>
+  <%= render(@cart.cart_items) %>
+  <br>
+</ul>
+<span class="total_line">Toplam -- <%= number_to_currency(cart.total_price, unit: "TRY", separator: ",", delimiter: "", format: "%n %u") %></span>
+<br>
+<br>
+<%= button_to "Satin al", new_order_path, method: :get, class:"btn btn-success btn-sm" %>
+<br>
+<%= button_to 'Sepeti bosalt', cart, method: :delete, data: { confirm: 'Sepeti boşaltmak istediğinizden emin misiniz?' }, class:"btn btn-danger btn-xs" %>
+<br>

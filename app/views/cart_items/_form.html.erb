@@ -1,0 +1,12 @@
+<%= simple_form_for(@cart_item) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :urun %>
+    <%= f.association :kart %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :gonder %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookstoreOnRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">KTU Store On Rails</a>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Hobi',              hobi_path %></li>
+        <li><%= link_to 'Mizah',            mizah_path %></li>
+        <li><%= link_to 'Sanat',            sanat_path %></li>
+        <li><%= link_to 'Bilim',            bilim_path %></li>
+        <li><%= link_to 'Dil'  ,              dil_path %></li>
+        <li><%= link_to 'Çocuk',            cocuk_path %></li>
+        <li><%= link_to 'Tarih',            tarih_path %></li>
+        <li><%= link_to 'Çizgi Roman', cizgiroman_path %></li>
+        <li><%= link_to 'Edebiyat',      edebiyat_path %></li>
+        <li><%= link_to 'Din',                din_path %></li>
+
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="<%= controller.controller_name %>">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

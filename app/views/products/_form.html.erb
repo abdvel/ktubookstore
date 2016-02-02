@@ -1,0 +1,22 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <%= f.input :title %>
+  </div>
+  <div class="field">
+    <%= f.input :description %>
+  </div>
+  <div class="field">
+    <%= f.input :price %>
+  </div>
+  <div class="field">
+    <%= f.input :category, collection: ["Hobi", "Mizah", "Sanat", "Bilim", "Dil", "Çocuk", "Tarih", "Çizgi Roman", "Edebiyat", "Din"] %>
+  </div>
+  <div class="field">
+    <%= f.input :image_url %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, class:"btn btn-success btn-lg" %>
+  </div>
+<% end %>
