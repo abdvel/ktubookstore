@@ -1,6 +1,10 @@
 # bookstoreOnRails  <a  target=_blank href=http://ktubookstore.herokuapp.com>DEMO</a>
 Basic implementation of a modern university bookstore/supply store.
 
+#How to add new book demo?
+<a  target=_blank href=ktubookstore.herokuapp.com/products/new>Demo Add New Book</a>
+
+
 ### How to run this rails app
 1. Install Ruby >= v2.0.0
 2. Install Rails >= v4.2.4
