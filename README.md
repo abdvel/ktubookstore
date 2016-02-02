@@ -1,4 +1,4 @@
-# bookstoreOnRails  <a  target=_blank href=http://ktubookstore.herokuapp.com">DEMO</a>
+# bookstoreOnRails  <a  target=_blank href=http://ktubookstore.herokuapp.com>DEMO</a>
 Basic implementation of a modern university bookstore/supply store.
 
 ### How to run this rails app
