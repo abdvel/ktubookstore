@@ -1,4 +1,4 @@
-# bookstoreOnRails  <a href="KTU Book Store">DEMO</a>
+# bookstoreOnRails  <a href=http://ktubookstore.herokuapp.com"KTU Book Store">DEMO</a>
 Basic implementation of a modern university bookstore/supply store.
 
 ### How to run this rails app
