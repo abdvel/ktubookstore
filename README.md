@@ -2,7 +2,7 @@
 Basic implementation of a modern university bookstore/supply store.
 
 #How to add new book demo?
-<a  target=_blank href=ktubookstore.herokuapp.com/products/new>Demo Add New Book</a>
+<a  target=_blank href=http://ktubookstore.herokuapp.com/products/new>Demo Add New Book</a>
 
 
 ### How to run this rails app
